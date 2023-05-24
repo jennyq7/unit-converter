@@ -1,0 +1,11 @@
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+h1 {
+    background-color:$main-color;
+    display: flex;
+    justify-content: center;
+    @include setPadding(2rem, 1rem, 2rem, 1rem);
+    font-size: 3rem;
+}
