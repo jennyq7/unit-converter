@@ -1,3 +1,53 @@
 @use '../../styles/partials/_fonts.scss' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+
+.main {
+    @include setPadding(1rem, 1rem, 1rem, 1rem);
+    display: flex;
+    flex-direction: column;
+    
+
+    &__text {
+        font-weight: 300;
+        @include setPadding(0rem, 0rem, 2rem, 0rem);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-button {
+        border-radius: 5px;
+        @include setMargin(0rem, 0rem, 5rem, 0rem);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        @include setPadding(0.3rem, 0rem, 0.3rem, 0rem);
+        width: 100%;
+        background-color:$main-color;
+    }
+
+    &__form-ounce-label {
+        @include setPadding(0rem, 0rem, 1rem, 0rem);
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__form-ounce-field {
+        @include setMargin(0rem, 0rem, 5rem, 0rem);
+
+        &:active {
+            border-color: $green;
+        } 
+    }
+
+    &__form-mill-label {
+        @extend .main__form-ounce-label;
+    }
+
+    // &__form-mill-field {
+    //     @extend .main__form-ounce-field;
+    // }
+}

@@ -1,0 +1,25 @@
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    @include setPadding(0rem, 0rem, 5rem, 0rem);
+
+    &__label {
+        @include setPadding(0rem, 0rem, 1rem, 0rem);
+        display: flex;
+        justify-content: center;
+    }
+
+    &__field {
+    &:active {
+        border-color: $green;
+    }
+
+    &:invalid {
+        border-color: $red;
+    }
+}
+}
