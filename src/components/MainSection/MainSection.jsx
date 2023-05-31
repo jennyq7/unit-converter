@@ -12,7 +12,7 @@ function MainSection () {
         const ounceNum = Number(e.target.ounce.value);
         
         if (typeof ounceNum === "number") {
-            setResult(ounceNum * 29.574);
+            setResult((ounceNum * 29.574).toFixed(2));
         } 
         else {return "Please enter a number in the box above."}
         
@@ -28,7 +28,7 @@ function MainSection () {
               <input className="main__form-ounce-field" type="number" name="ounce" id="ounce" placeholder="12" required />
               <button className="main__form-button">Convert!</button>
               <label className="main__form-mill-label">Millimeters</label>
-              <span className="main__form-result">{result}</span>        
+              <aside className="main__form-result">{result}</aside>        
            </form>
         </main>
     )

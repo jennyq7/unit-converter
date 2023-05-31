@@ -7,10 +7,17 @@
     display: flex;
     flex-direction: column;
     
+    @include tablet {
+        @include setPadding(2rem, 2rem, 2rem, 2rem);
+    }
 
     &__text {
         font-weight: 300;
         @include setPadding(0rem, 0rem, 2rem, 0rem);
+
+        @include tablet {
+            @include setMargin(0, 0, 2rem, 0);
+        }
     }
 
     &__form {
@@ -27,6 +34,14 @@
         @include setPadding(0.3rem, 0rem, 0.3rem, 0rem);
         width: 100%;
         background-color:$main-color;
+
+        @include tablet {
+            @include setPadding(0.6rem, 0rem, 0.6rem, 0rem);
+        }
+
+        @include desktop {
+            @include setMargin(0, 0, 6rem, 0);
+        }
     }
 
     &__form-ounce-label {
@@ -36,7 +51,7 @@
     }
     
     &__form-ounce-field {
-        @include setMargin(0rem, 0rem, 5rem, 0rem);
+        @include setMargin(0rem, 0rem, 4rem, 0rem);
         @include setPadding(0.5rem, 0.5rem, 0.5rem, 0rem);
 
         &:active {
@@ -46,17 +61,20 @@
 
     &__form-mill-label {
         @extend .main__form-ounce-label;
+        @include setMargin(0, 0, 1rem, 0);
     }
 
     &__form-result {
         border: 3px dotted $green;
-        height: 10rem;
-        width: 10rem;
         display: flex;
         justify-content: center;
-        //align-content: center;
-        border-radius: 50%;
-        @include setPadding(1rem, 1rem, 1rem, 1rem);
-        border-style:groove
+        align-self: center;
+        width: 30%;
+        border-radius: 30% 30% 30% 30%;
+        @include setPadding(1.2rem, 1rem, 1rem, 1rem);
+        border-style:dashed;
+        font-size: 1.4rem;
+
+      
     }
 }
