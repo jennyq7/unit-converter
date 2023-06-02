@@ -4,10 +4,10 @@ function Footer () {
 
     return (
         <footer className="footer">
-            <span>Contact Info:</span>
-            <section>
-                <div>Linkedin: https://www.linkedin.com/in/jennyquan7/</div>
-                <div>Github: https://github.com/jennyq7</div>
+            <span className="footer__title">Contact Info:</span>
+            <section className="footer__links">
+                <a href="https://www.linkedin.com/in/jennyquan7/"><div>Linkedin</div></a>
+                <a href="https://github.com/jennyq7"><div>Github</div></a>
             </section>
         </footer>
     )

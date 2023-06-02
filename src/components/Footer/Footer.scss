@@ -3,5 +3,23 @@
 @use '../../styles/partials/variables' as *;
 
 .footer {
-    @include setPadding(2rem, 1rem, 1rem, 1rem);
+    @include setPadding(2rem, 1rem, 2rem, 1rem);
+    @include setMargin(7rem, 0rem, 0rem, 0rem);
+    display: flex;
+    flex-direction: column;
+    background-color: $main-color;
+    min-height: 60vh;
+
+    &__title {
+        font-weight: 600;
+        @include setMargin(0, 0, 1rem, 0);
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        height:50%;
+        gap: 1rem;
+    }
+
 }
