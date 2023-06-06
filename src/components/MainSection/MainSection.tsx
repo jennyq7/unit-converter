@@ -5,17 +5,19 @@ function MainSection () {
 
     const [result, setResult] = useState("");
 
+    function handleSubmit (event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
 
-    function handleSubmit (e) {
-        e.preventDefault();
+        const target = event.target as typeof event.target & {
+            ounce: { value: string};
+        };
 
-        const ounceNum = Number(e.target.ounce.value);
-        
+
+        let ounceNum : number = Number((target.ounce.value));
         if (typeof ounceNum === "number") {
             setResult((ounceNum * 29.574).toFixed(2));
         } 
         else {return "Please enter a number in the box above."}
-        
         
     }
 
