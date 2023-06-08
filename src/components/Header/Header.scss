@@ -2,9 +2,9 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
-//mobile is 320px;
+
 h1 {
-    background-color:$main-color;
+    background-color: $main-color;
     display: flex;
     justify-content: center;
     @include setPadding(2rem, 1rem, 2rem, 1rem);

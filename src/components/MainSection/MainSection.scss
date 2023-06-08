@@ -34,7 +34,17 @@
         align-content: center;
         @include setPadding(0.3rem, 0rem, 0.3rem, 0rem);
         width: 100%;
-        background-color:$main-color;
+        font-weight: 600;
+        background-color: $main-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+
+        &:active {
+            background-color: $green;
+        }
 
         @include tablet {
             @include setPadding(0.6rem, 0rem, 0.6rem, 0rem);
@@ -50,14 +60,14 @@
         display: flex;
         justify-content: center;
     }
-    
+
     &__form-ounce-field {
         @include setMargin(0rem, 0rem, 4rem, 0rem);
         @include setPadding(0.5rem, 0.5rem, 0.5rem, 0rem);
 
         &:active {
             border-color: $green;
-        } 
+        }
     }
 
     &__form-mill-label {
@@ -73,9 +83,9 @@
         width: 30%;
         border-radius: 30% 30% 30% 30%;
         @include setPadding(1.2rem, 1rem, 1rem, 1rem);
-        border-style:dashed;
+        border-style: dashed;
         font-size: 1.4rem;
-
-      
     }
 }
+
+;

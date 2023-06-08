@@ -1,11 +1,10 @@
 import './Header.scss';
 
-function Header () {
+function Header() {
 
- return (
-    <h1>Unit Converter</h1>
- )
- 
+    return (
+        <h1>Unit Converter</h1>
+    )
 }
 
 export default Header;

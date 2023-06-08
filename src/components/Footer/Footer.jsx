@@ -1,6 +1,6 @@
 import './Footer.scss';
 
-function Footer () { 
+function Footer() {
 
     return (
         <footer className="footer">
@@ -11,7 +11,6 @@ function Footer () {
             </section>
         </footer>
     )
-
 }
 
 export default Footer;
